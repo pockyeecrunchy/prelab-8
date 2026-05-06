@@ -305,7 +305,7 @@ void binaryTree::RebalanceTree()
 	else if (BalanceFactor(_pRoot) < -1)
 	{
 		//right-left case
-		if (BalanceFactor(_pRoot->pLeft) < -1)
+		if (BalanceFactor(_pRoot->pRight) > 0)
 		{
 			_pRoot->pRight = RightRotate(_pRoot->pRight);
 		}
