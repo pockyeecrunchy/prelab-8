@@ -114,7 +114,7 @@ void binaryTree::InOrderSearch(ofstream& out, node* pCurrentNode)
 	InOrderSearch(out, pCurrentNode->pRight);
 }
 
-void PostOrderSearch(ofstream& out, node* pCurrentNode)
+void binaryTree::PostOrderSearch(ofstream& out, node* pCurrentNode)
 {
 	if (pCurrentNode == nullptr) return;
 
@@ -221,7 +221,7 @@ node* binaryTree::DeleteNode(node* pCurrent, int valueToDelete)
 		{
 			// Find smallest node in right subtree
 			ptemp = pCurrent->pRight;
-			while (ptemp->pLeft == nullptr)
+			while (ptemp->pLeft != nullptr)
 			{
 				ptemp = ptemp->pLeft;
 			}
@@ -287,7 +287,7 @@ int binaryTree::BalanceFactor(node* pNode)
 
 void binaryTree::RebalanceTree()
 {
-	if (_pRoot = nullptr) return;
+	if (_pRoot == nullptr) return;
 
 	//left heavy
 	if (BalanceFactor(_pRoot) > 1)
@@ -326,7 +326,7 @@ node* binaryTree::RightRotate(node* pNode)
 
 	//update the heights
 	SetHeight(pNode, 1 + Max(GetHeight(pNode->pLeft), GetHeight(pNode->pRight)));
-	SetHeight(pAlpha, 1 + Max(GetHeight(pAlpha->pLeft), GetHeight(pNode->pRight)));
+	SetHeight(pAlpha, 1 + Max(GetHeight(pAlpha->pLeft), GetHeight(pAlpha->pRight)));
 
 	//return the new root
 	return pAlpha;

@@ -23,7 +23,7 @@ int main()
 	outIn.open("InOrder.txt");
 	outPost.open("PostOrder.txt");
 
-	if (!fin || !outPre || !outIn || outPost)
+	if (!fin || !outPre || !outIn || !outPost)
 	{
 		cout << "There is an error opening the files!\n";
 		return 1;

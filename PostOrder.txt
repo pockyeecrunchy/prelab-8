@@ -1,0 +1,8 @@
+
+Max:99
+Min:0
+Node Count: 30
+
+After Deletion:
+4 13 7 22 31 28 26 37 46 44 32 56 66 50 73 73 68 84 97 95 98 97 91 74 49 
+Node Count: 25
