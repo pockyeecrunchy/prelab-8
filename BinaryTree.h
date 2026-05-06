@@ -24,23 +24,6 @@ private:
     node* _pRoot;
     int _nodeCount;
 
-public:
-    binaryTree(); //constructor
-    ~binaryTree(); //destructor
-
-    int GetNodeCount();
-    void IncreaseNodeCount();
-    void DecreaseNodeCount();
-
-    node* GetRoot();
-};
-
-class binaryTree
-{
-private:
-    node* _pRoot;
-    int _nodeCount;
-
     //the private methods
     node* InsertNode(node* pCurrent, node* pNewNode);
     node* DeleteNode(node* pCurrent, int numberToDelete);
