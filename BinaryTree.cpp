@@ -344,7 +344,7 @@ node* binaryTree::LeftRotate(node* pNode)
 
 	//Calculate the new heights
 	SetHeight(pNode, 1 + Max(GetHeight(pNode->pLeft), GetHeight(pNode->pRight)));
-	SetHeight(pAlpha, 1 + Max(GetHeight(pAlpha->pLeft), GetHeight(pNode->pRight)));
+	SetHeight(pAlpha, 1 + Max(GetHeight(pAlpha->pLeft), GetHeight(pNode->pRight))); 
 
 	//return the new root
 	return pAlpha;
