@@ -35,7 +35,7 @@ int main()
 	// Print traversals
 	tree.PreOrderSearch(outPre, tree.GetRoot());
 	tree.InOrderSearch(outIn, tree.GetRoot());
-	tree.PostOrderSearch(outIn, tree.GetRoot());
+	tree.PostOrderSearch(outPost, tree.GetRoot());
 
 	// MAX FUNCTION
 	funcPtr = Max;
